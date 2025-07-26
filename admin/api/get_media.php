@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 $data = [];
 
 while ($row = $result->fetch_assoc()) {
-    $file_path = "https://adminworks.bhavicreations.com/uploads/ourworks" . $row['file_name'];
+    $file_path = "./admin/public/uploads/staff" . $row['file_name'];
     $data[] = [
         "media_type" => $row['media_type'],
         "media_url" => $file_path,
